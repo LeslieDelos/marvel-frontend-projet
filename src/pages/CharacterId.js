@@ -25,8 +25,7 @@ function CharacterId() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          //https://marvel-back-projet.herokuapp.com/comics/characterId
-          `https://lereacteur-marvel-api.herokuapp.com/comics/${params.characterId}`
+          `https://marvel-back-projet.herokuapp.com/comics/${params.characterId}`
         );
         console.log(params.characterId);
         setData(response.data);

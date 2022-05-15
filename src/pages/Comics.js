@@ -32,8 +32,7 @@ const Comics = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        //https://marvel-back-projet.herokuapp.com/comics
-        `https://lereacteur-marvel-api.herokuapp.com/comics?apiKey=${process.env.MARVEL_API_KEY}`
+        "https://marvel-back-projet.herokuapp.com/comics"
       );
       // console.log(response.data);
       setData(response.data);

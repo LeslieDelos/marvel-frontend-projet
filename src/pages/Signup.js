@@ -13,8 +13,7 @@ const Signup = ({ handleToken }) => {
     event.preventDefault();
     try {
       const response = await axios.post(
-        //https://marvel-back-projet.herokuapp.com/singup
-        "https://lereacteur-marvel-api.herokuapp.com/signup?apiKey=${process.env.MARVEL_API_KEY}",
+        "https://marvel-back-projet.herokuapp.com/singup",
         {
           email: email,
           username: username,

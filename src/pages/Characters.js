@@ -22,8 +22,7 @@ const Characters = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        //https://marvel-back-projet.herokuapp.com/characters
-        `https://lereacteur-marvel-api.herokuapp.com/characters?apiKey=${process.env.MARVEL_API_KEY}`
+        "https://marvel-back-projet.herokuapp.com/characters"
       );
       // console.log(response.data);
       setData(response.data);

@@ -12,8 +12,7 @@ const Login = ({ handleToken }) => {
     event.preventDefault();
     try {
       const response = await axios.post(
-        //https://marvel-back-projet.herokuapp.com/login
-        "https://lereacteur-marvel-api.herokuapp.com/login?apiKey=${process.env.MARVEL_API_KEY}",
+        "https://marvel-back-projet.herokuapp.com/login",
         {
           email,
           password,

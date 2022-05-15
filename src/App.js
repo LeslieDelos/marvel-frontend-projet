@@ -28,11 +28,3 @@ function App() {
 }
 
 export default App;
-
-//message !!!!
-//toutes mes routes fonctionnent quand j'utilise URL de mon back qui
-// contient mon API KEy mais lorsque j'utlise mon lien Heroku cela
-// ne fonctionne pas car j'ai eu un probleme de déploiement
-
-//j'ai pu faire mon déploiement heroku mais le lien n'amène pas sur mon site marvel puisque
-// j'ai un probleme de déploiement avec mon back
