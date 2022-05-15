@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+// import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css";
+
+//pages
+import Comics from "./pages/Comics";
+import Characters from "./pages/Characters";
+import Favoris from "./pages/Favoris";
+import Home from "./pages/Home";
+import CharactersId from "./pages/CharacterId";
+import Signup from "./pages/Signup";
+import Login from "./pages/Login";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/characters" element={<Characters />} />
+        <Route path="/comics" element={<Comics />} />
+        <Route path="/favoris" element={<Favoris />} />
+        <Route path="/character/:characterId" element={<CharactersId />} />
+      </Routes>
+    </Router>
   );
 }
 
 export default App;
+
+//message !!!!
+//toutes mes routes fonctionnent quand j'utilise URL de mon back qui
+// contient mon API KEy mais lorsque j'utlise mon lien Heroku cela
+// ne fonctionne pas car j'ai eu un probleme de déploiement
+
+//j'ai pu faire mon déploiement heroku mais le lien n'amène pas sur mon site marvel puisque
+// j'ai un probleme de déploiement avec mon back
